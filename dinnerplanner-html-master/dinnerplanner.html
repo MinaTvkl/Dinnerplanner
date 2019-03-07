@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+  <div class="col-xs-12" id="header">
+    <h1>Dinner planner</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="col-xs-12" id="welcomeView"> <!--connects to welcomeView-->
+      <div class="col-xs-12" id="welcome">
+    	</div>
+      <div>
+        <button type="button" class="btn btn-warning" id="createDinnerButton">Create new dinner</button>
+      </div>
+    </div>
+    <div class="container-fluid row">
+      <div id="sidebarView">
+        <div class="col-lg-2 col-xs-12" style="padding:0%; "id = "leftbox">
+          <h5 style="text-align: center;">My Dinner</h5>
+            <div class="row">
+              <div class="col-xs-6">
+                <p style="text-align: center;" id="numberOfGuests">People</p>
+              </div>
+              <div class="col-xs-6">
+                <div class="btn-group"  role="group" aria-label="...">
+                  <button type="button" id="plusGuest" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-plus"></span>
+                  </button>
+                  <button type="button" id="minusGuest" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-minus"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+              <table class="table">
+                <thead id="dishName">
+                  <tr>
+                    <th>Dish Name</th>
+                    <th>Cost</th>
+                  </tr>
+                </thead>
+                <tbody id="dishTable">
+                </tbody>
+              </table>
+              <div class = "text-center text-danger" id="myOrder">
+                <span id="totalprice"></span> <!--prints totalprice -->
+              </div>
+              <div class ="row" id="padding">
+              </div>
+              <div class = "text-center">
+                <button type="button" class="btn buttonleft" id="confirmDinnerButton"> <!--inline listeners, not recomended? -->
+                  Confirm Dinner
+                </button>
+              </div>
+              <div class ="row container" id="padding">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-10 col-xs-12 container" id="rightbox">
+            <div class="container" id="dishSearchView"> <!--connects to dishsearchView-->
+              <div>
+                <h4>Find a Dish</h4>
+              </div>
+              <div class="row" id ="upperRight">
+                <div class="dropdown col-lg-2 col-xs-12">
+                  <div>
+                    <input type="text" id="searchField" placeholder="Enter key words">
+                  </div>
+      						<select class="form-control " id="dishType">
+                        <!--<option value="all">All</option> -->
+          					<option value="Appetizer">Appetizer</option>
+  									<option value="Main Course">Main Course</option>
+  									<option value="Dessert">Dessert</option>
+  									<option value="Salad">Salad</option>
+  									<option value="Side Dish">Side Dish</option>
+  									<option value="Bread">Bread</option>
+  									<option value="Breakfast">Breakfast</option>
+  									<option value="Soup">Soup</option>
+  									<option value="Beverage">Beverage</option>
+  									<option value="Sauce">Sauce</option>
+  									<option value="Drink">Drink</option>
+      						</select>
+                </div>
+                <button class="btn col-lg-2 " type="button" id="searchButton">Search</button>
+      				</div>
+              <div class="col-sm-12" id="dishes-image"> <!--image generator-->
+                  <span id="totalprice"></span>
+              </div>
+              <h1 class="searchError"></h1>
+              <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            <div class="row" id = "dishDetailsView"> <!--connects to dishDetailsView-->
+              <div class="col-sm-6 container"> <!--retrieves dishinfo-->
+                <div id="dishinfo">
+                </div>
+                <button class="btn" id="backToSearchButton">Back to search</button>
+              </div>
+              <div class="col-sm-6 container">
+                <div id="dishingredients">
+                </div>
+                <button class="btn" id="addToMenuButton">Add to menu</button>
+              </div>
+              <h1 id="detailsError">Error</h1>
+              <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12" style="padding: 0%;" id="headView"> <!--connects to headView-->
+          <div id="upperBox">
+            <div class="row" >
+              <div id="pagehead">
+              </div>
+              <button type="button" class="btn btn-warning" id="goBackAndEditDinnerButton"> Go back and edit dinner </button>
+            </div>
+          </div>
+        </div>
+        <div id="printPageView"><!--connets to printPageView-->
+          <div id="printdishes">
+          </div>
+        </div>
+        <div id="dinnerOverviewView"> <!--connets to dinnerOverviewView-->
+          <div class="col-sm-12" id="dishes-image"> <!--image generator-->
+          </div>
+          <h1 class="error"></h1>
+          <div>
+            <span id="totalprice"></span> <!--prints totalprice -->
+            <button type="button" class="btn btn-warning center-block" id="printFullRecipeButton">
+                Print full recipe
+            </button>
+          </div>
+        </div>
+      </div>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+
+<script src="js/view/sidebarView.js"></script>
+<script src="js/controller/sidebarController.js"></script>
+<script src="js/view/itemView.js"></script>
+<script src="js/controller/itemController.js"></script>
+
+<script src="js/view/dishSearchView.js"></script>
+<script src="js/controller/dishSearchController.js"></script>
+
+<script src="js/view/dishDetailsView.js"></script>
+<script src="js/controller/dishDetailsController.js"></script>
+
+<script src="js/view/dinnerOverviewView.js"></script>
+<script src="js/view/printPageView.js"></script>
+<script src="js/view/headView.js"></script>
+<script src="js/view/welcomeView.js"></script>

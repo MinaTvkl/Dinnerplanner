@@ -1,0 +1,286 @@
+#header{
+  background-color:gainsboro;
+  text-align: center;
+}
+
+body{
+  text-align: center;
+}
+#leftbox{
+  border-top: solid;
+border-bottom: solid;
+  padding-right: 0%;
+text-align: left;
+
+}
+#padding{
+  padding:7%;
+}
+.buttonleft{
+  background-color:gainsboro;
+  padding:2%;
+
+}
+#rightbox{
+  padding: 0px;
+
+}
+#rightbox2{
+  text-align:left;
+
+}
+#upperRight{
+  border-bottom:solid;
+  padding: 1%;
+}
+#upperBox{
+  border-style: solid;
+  padding: 1%;
+  width: 100%;
+}
+
+.dishlist{
+  display:inline-block;
+  width: 140px;
+  height: 200px;
+  overflow: hidden;
+  text-align: left;
+  margin: 1%;
+}
+
+.dishimage{
+  width: 140px;
+  height: 140px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow:hidden;
+}
+
+.dishname{
+  background-color: lightgray;
+  opacity: 0.7;
+  text-align: center;
+  width: inherit;
+  margin-top: 120px;
+  display: block;
+
+}
+
+
+#collapseMenu{
+padding: 3%;
+
+}
+
+#dishName{
+  background-color:gainsboro;
+  border-top: solid;
+  border-bottom:solid;
+  padding: 3%;
+}
+
+#card1{
+  margin-left: 7%
+}
+
+.dropdown {
+  display: inline;
+}
+
+
+#hometext{
+  padding-top: 7%;
+
+}
+.column {
+  border-style: solid;
+  float: left;
+  width: 25s%;
+  padding: 0.5%;
+  margin-left: 5%;
+
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.note {
+    font-size: .8em;
+}
+
+.dishnameprint{
+  font-size: 16 px;
+}
+#imagecontainer{
+	padding-top: 2.5%;
+}
+.printimage{
+  width: 160px;
+	height: 160px;
+	display: block;
+	background-size: 100%;
+
+}
+#printtext{
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+ /*background-color: orange;*/
+}
+th, td {
+  text-align: left;
+  border-bottom: 1px solid #lightgray;
+}
+
+ #bigimage{
+   width: 200px;
+   height: 200px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-bottom: 8%;
+   text-align: center;
+ }
+#dishitemtable{
+  margin-top: 10%;
+}
+
+#backToSearchButton{
+  margin-bottom: 3%;
+}
+#goBackAndEditDinnerButton{
+margin-bottom: 1%;
+
+}
+#addToMenuButton{
+  margin-right: 20%;
+  margin-bottom: 3%;
+}
+
+#searchButton{
+  margin-left: 2%;
+}
+
+#searchField{
+  border: solid;
+  margin-bottom: 6%;
+}
+.btn-group{
+  padding-left: 40%;
+}
+
+#dishSearchView{
+  border: solid;
+  margin: 0%;
+}
+#dishDetailsView{
+  border: solid;
+  margin: auto;
+}
+
+#detailsError{
+  padding:10%;
+  text-align: center;
+}
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: pink;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
